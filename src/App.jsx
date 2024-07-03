@@ -10,7 +10,7 @@ export const App = () => {
 
   return (
     <div className='w-screen flex flex-col justify-center items-center gap-6 my-8'>
-      <h1 className='text-2xl font-bold text-center md:text-4xl'>Simulador de Movimiento Físico</h1>
+      <h1 className='text-2xl font-bold text-center md:text-4xl px-10'>Simulador de Movimiento Físico</h1>
       <InputForm onSimulate={setParams} />
       {
         params && (
