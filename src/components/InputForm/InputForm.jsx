@@ -18,6 +18,7 @@ export const InputForm = ({ onSimulate }) => {
           type="number"
           value={mass}
           label="Masa (kg)"
+          required
           onChange={(e) => setMass(e.target.value)}
         />
         <br />
@@ -25,6 +26,7 @@ export const InputForm = ({ onSimulate }) => {
           type="number"
           value={force}
           label="Fuerza (N)"
+          required
           onChange={(e) => setForce(e.target.value)}
         />
         <br />
@@ -32,6 +34,7 @@ export const InputForm = ({ onSimulate }) => {
           type="number"
           value={time}
           label="Tiempo (s)"
+          required
           onChange={(e) => setTime(e.target.value)}
         />
         <br />
