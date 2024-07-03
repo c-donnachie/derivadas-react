@@ -2,7 +2,7 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from 
 
 export const Simulation = ({ data }) => {
   return (
-    <div className="w-[40%] flex flex-col items-center gap-4">
+    <div className="w-[40%] flex flex-col items-center gap-4 media sm:w-[98%]">
           <h3 className="text-2xl">Resultados de la Simulación</h3>
       <Table isStriped aria-label="Example static collection table">
         <TableHeader>
