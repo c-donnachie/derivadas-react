@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
+import { CircularProgress } from "@nextui-org/react";
 import { usePhysicsSimulation } from './hooks/usePhysicsSimulation';
 
 import { InputForm } from './components/InputForm/InputForm';
 import { Simulation } from './components/Simulation/Simulation';
 
 export const App = () => {
+  const [value, setValue] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((v) => (v >= 100 ? 0 : v + 10));
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+  
   const [params, setParams] = useState('');
   const simulationData = usePhysicsSimulation(params);
 
